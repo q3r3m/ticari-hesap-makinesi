@@ -1,0 +1,273 @@
+<title>Ticari Hesap Makinesi Gizlilik Politikası</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500&family=DM+Mono:wght@500&display=swap">
+
+<style>
+  /* Uygulamanın kendi dünyası: gövde her zaman simsiyah, vurgu sarı.
+     Tek görünüm bilinçli seçildi — bu yüzden bütün renkler açıkça yazılı. */
+  :root {
+    --ground:  #0A0A0A;
+    --surface: #141414;
+    --raised:  #1B1B1B;
+    --ink:     #EFEFEF;
+    --ink-dim: #8E8E8E;
+    --ink-faint: #6A6A6A;
+    --accent:  #FFD400;
+    --line:    rgba(255, 255, 255, 0.09);
+    --measure: 62ch;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: var(--measure);
+    margin: 0 auto;
+    padding: 72px 24px 96px;
+  }
+
+  /* Başlık bloğu */
+  .masthead { display: flex; flex-direction: column; gap: 28px; }
+
+  .brand { display: flex; align-items: center; gap: 14px; }
+
+  .brand svg { width: 34px; height: 34px; flex-shrink: 0; }
+
+  .brand-name {
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+  }
+
+  h1 {
+    font-family: "Space Grotesk", "Helvetica Neue", sans-serif;
+    font-weight: 700;
+    font-size: clamp(34px, 7vw, 46px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+    margin: 0;
+    color: var(--ink);
+  }
+
+  .dates {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: 13px;
+    color: var(--ink-faint);
+  }
+
+  /* Asıl mesaj: tek cümle */
+  .headline {
+    margin: 44px 0 0;
+    padding: 26px 28px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    border-radius: 4px;
+  }
+
+  .headline p {
+    margin: 0;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.45;
+    color: var(--ink);
+  }
+
+  h2 {
+    font-family: "Space Grotesk", "Helvetica Neue", sans-serif;
+    font-weight: 700;
+    font-size: 21px;
+    letter-spacing: -0.01em;
+    margin: 52px 0 14px;
+    padding-top: 26px;
+    border-top: 1px solid var(--line);
+    color: var(--ink);
+  }
+
+  p { margin: 0 0 16px; color: var(--ink); }
+
+  p.quiet { color: var(--ink-dim); }
+
+  strong { font-weight: 500; color: var(--accent); }
+
+  ul { margin: 0 0 16px; padding-left: 22px; }
+  li { margin-bottom: 8px; }
+  li::marker { color: var(--ink-faint); }
+
+  /* İletişim kutusu */
+  .contact {
+    margin-top: 20px;
+    padding: 20px 24px;
+    background: var(--raised);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    border-radius: 4px;
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: 15px;
+    color: var(--ink);
+  }
+
+  /* İngilizce bölüm */
+  .english {
+    margin-top: 80px;
+    padding-top: 44px;
+    border-top: 3px solid var(--line);
+  }
+
+  .english h2 { border-top: none; padding-top: 0; margin-top: 40px; }
+
+  .lang-label {
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 8px;
+  }
+
+  .english h1 { font-size: clamp(28px, 6vw, 36px); }
+
+  footer {
+    margin-top: 72px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: 12px;
+    color: var(--ink-faint);
+    line-height: 1.8;
+  }
+
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { color: #FFE45C; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+  @media (max-width: 480px) {
+    body { font-size: 16px; }
+    .wrap { padding: 48px 20px 72px; }
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="brand">
+      <svg viewBox="0 0 760 760" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <line x1="212" y1="566" x2="548" y2="194" stroke="#FFD400" stroke-width="80" stroke-linecap="round"></line>
+        <circle cx="232" cy="228" r="122" fill="#FFD400"></circle>
+        <circle cx="528" cy="532" r="86" stroke="#FFD400" stroke-width="72" fill="none"></circle>
+      </svg>
+      <span class="brand-name">Ticari Hesap Makinesi</span>
+    </div>
+
+    <h1>Gizlilik Politikası</h1>
+
+    <div class="dates">
+      <span>Yürürlük tarihi: 19 Ağustos 2026</span>
+      <span>Sürüm 1.0</span>
+    </div>
+  </header>
+
+  <div class="headline">
+    <p>Bu uygulama hiçbir kişisel veri toplamaz, saklamaz veya paylaşmaz.</p>
+  </div>
+
+  <h2>Toplanan bilgiler</h2>
+  <p><strong>Hiçbiri.</strong> Uygulama senden ad, soyad, e-posta, telefon numarası, konum, kişi listesi, fotoğraf ya da cihaz kimliği istemez ve bunların hiçbirini toplamaz. Hesap açman veya giriş yapman gerekmez.</p>
+
+  <h2>Cihazında kalanlar</h2>
+  <p>Uygulamayı kullanırken oluşan şu bilgiler <strong>yalnızca kendi cihazında</strong> saklanır:</p>
+  <ul>
+    <li>Bant (geçmiş) kayıtların — son 200 işlem</li>
+    <li>Sepetteki kalemler</li>
+    <li>Hafızadaki (M) ve genel toplamdaki (GT) değerler</li>
+    <li>Seçtiğin KDV oranı ve tuş rengi</li>
+  </ul>
+  <p>Bunlar cihazının kendi yerel ayar deposunda tutulur; bize ya da başka kimseye gönderilmez. Uygulamayı sildiğinde bu bilgiler de cihazından silinir.</p>
+
+  <h2>Widget ve Kontrol Merkezi</h2>
+  <p>Ana ekrana koyduğun widget ve Kontrol Merkezi tuşu sepet toplamını gösterebilir. Bunun için uygulama, sepetin <strong>yalnızca özetini</strong> (kalem sayısı, adet ve genel toplam) cihazının içinde ayrılmış ortak bir alana yazar. Bu alan da <strong>cihazından çıkmaz</strong>; başka uygulamalar okuyamaz, hiçbir yere gönderilmez. Widget'ı kaldırırsan ya da uygulamayı silersen bu özet de silinir.</p>
+
+  <h2>İnternet bağlantısı</h2>
+  <p>Uygulama internete <strong>hiç bağlanmaz</strong>. Arkasında sunucu yoktur; uçak modunda da tam olarak aynı şekilde çalışır.</p>
+
+  <h2>Üçüncü taraflar</h2>
+  <p>Reklam ağı, analitik aracı, çökme raporlama servisi ya da izleme kodu <strong>kullanılmaz</strong>. Hiçbir veri hiçbir üçüncü tarafla paylaşılmaz, satılmaz veya kiralanmaz. Uygulama seni internetteki başka uygulama ve sitelerde takip etmez.</p>
+
+  <h2>Paylaş tuşu</h2>
+  <p>Bandı veya sepet fişini paylaştığında, o metin iOS'un kendi paylaşım penceresiyle <em>senin seçtiğin</em> uygulamaya (WhatsApp, Mesajlar, Notlar…) gider. Bu içerik bize ulaşmaz; gönderdiğin uygulamadan sonrası o uygulamanın kendi gizlilik politikasına tabidir.</p>
+
+  <h2>Çocuklar</h2>
+  <p>Uygulama hiçbir veri toplamadığı için her yaş için uygundur. 13 yaşın altındaki kullanıcılardan da hiçbir bilgi toplanmaz.</p>
+
+  <h2>Bu politikada değişiklik</h2>
+  <p>Politika değişirse bu sayfa güncellenir ve yukarıdaki yürürlük tarihi yenilenir. Uygulamanın veri toplamaya başlaması gibi esaslı bir değişiklik olursa, bu sayfada açıkça belirtilir.</p>
+
+  <h2>İletişim</h2>
+  <p class="quiet">Gizlilikle ilgili sorularını yazabilirsin:</p>
+  <div class="contact">
+    <a href="mailto:hesapmakinesiogz@gmail.com">hesapmakinesiogz@gmail.com</a>
+  </div>
+
+  <section class="english">
+    <p class="lang-label">English</p>
+    <h1>Privacy Policy</h1>
+    <p class="quiet">Effective 19 August 2026 · Version 1.0</p>
+
+    <div class="headline">
+      <p>This app does not collect, store, or share any personal data.</p>
+    </div>
+
+    <h2>Data we collect</h2>
+    <p><strong>None.</strong> The app never asks for or collects your name, email, phone number, location, contacts, photos, or device identifiers. No account or sign-in is required.</p>
+
+    <h2>What stays on your device</h2>
+    <p>Your calculation tape (last 200 entries), basket items, memory and grand-total values, your VAT rate, and your chosen key color are stored <strong>only on your device</strong>, in its local settings storage. This information is never transmitted anywhere. Deleting the app deletes it.</p>
+
+    <h2>Widget and Control Center</h2>
+    <p>The home-screen widget and the Control Center control can display your basket total. To make this possible the app writes <strong>only a summary</strong> of the basket (item count, quantity, and grand total) to a shared area inside your own device. That area <strong>never leaves the device</strong>, cannot be read by other apps, and is never transmitted. Removing the widget or deleting the app removes the summary.</p>
+
+    <h2>Network access</h2>
+    <p>The app <strong>never connects to the internet</strong>. There is no server behind it; it works identically in airplane mode.</p>
+
+    <h2>Third parties</h2>
+    <p>No advertising networks, analytics, crash reporting, or tracking of any kind. No data is shared, sold, or rented to anyone. The app does not track you across other apps or websites.</p>
+
+    <h2>The share button</h2>
+    <p>When you share your tape or basket receipt, the text is passed to the app <em>you</em> choose through the standard iOS share sheet. It never reaches us; from that point the receiving app's own privacy policy applies.</p>
+
+    <h2>Children</h2>
+    <p>Because the app collects no data at all, it is suitable for all ages. No information is collected from children under 13.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If this policy changes, this page is updated and the effective date above is revised. Any material change, such as the app beginning to collect data, will be stated clearly here.</p>
+
+    <h2>Contact</h2>
+    <div class="contact">
+      <a href="mailto:hesapmakinesiogz@gmail.com">hesapmakinesiogz@gmail.com</a>
+    </div>
+  </section>
+
+  <footer>
+    Ticari Hesap Makinesi · © 2026 Kerem Altansoy<br>
+    Bu sayfa App Store'un zorunlu tuttuğu gizlilik politikası bağlantısı içindir.
+  </footer>
+
+</div>

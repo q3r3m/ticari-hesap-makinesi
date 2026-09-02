@@ -1,0 +1,256 @@
+<title>Ticari Hesap Makinesi Destek</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500&family=DM+Mono:wght@500&display=swap">
+
+<style>
+  /* Uygulamanın kendi dünyası: gövde her zaman simsiyah, vurgu sarı.
+     Tek görünüm bilinçli seçildi — bu yüzden bütün renkler açıkça yazılı. */
+  :root {
+    --ground:  #0A0A0A;
+    --surface: #141414;
+    --raised:  #1B1B1B;
+    --ink:     #EFEFEF;
+    --ink-dim: #8E8E8E;
+    --ink-faint: #6A6A6A;
+    --accent:  #FFD400;
+    --line:    rgba(255, 255, 255, 0.09);
+    --measure: 62ch;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: var(--measure);
+    margin: 0 auto;
+    padding: 72px 24px 96px;
+  }
+
+  /* Başlık bloğu */
+  .masthead { display: flex; flex-direction: column; gap: 28px; }
+
+  .brand { display: flex; align-items: center; gap: 14px; }
+
+  .brand svg { width: 34px; height: 34px; flex-shrink: 0; }
+
+  .brand-name {
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+  }
+
+  h1 {
+    font-family: "Space Grotesk", "Helvetica Neue", sans-serif;
+    font-weight: 700;
+    font-size: clamp(34px, 7vw, 46px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+    margin: 0;
+    color: var(--ink);
+  }
+
+  .dates {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: 13px;
+    color: var(--ink-faint);
+  }
+
+  /* Asıl mesaj: tek cümle */
+  .headline {
+    margin: 44px 0 0;
+    padding: 26px 28px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    border-radius: 4px;
+  }
+
+  .headline p {
+    margin: 0;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.45;
+    color: var(--ink);
+  }
+
+  h2 {
+    font-family: "Space Grotesk", "Helvetica Neue", sans-serif;
+    font-weight: 700;
+    font-size: 21px;
+    letter-spacing: -0.01em;
+    margin: 52px 0 14px;
+    padding-top: 26px;
+    border-top: 1px solid var(--line);
+    color: var(--ink);
+  }
+
+  p { margin: 0 0 16px; color: var(--ink); }
+
+  p.quiet { color: var(--ink-dim); }
+
+  strong { font-weight: 500; color: var(--accent); }
+
+  ul { margin: 0 0 16px; padding-left: 22px; }
+  li { margin-bottom: 8px; }
+  li::marker { color: var(--ink-faint); }
+
+  /* İletişim kutusu */
+  .contact {
+    margin-top: 20px;
+    padding: 20px 24px;
+    background: var(--raised);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    border-radius: 4px;
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: 15px;
+    color: var(--ink);
+  }
+
+  /* İngilizce bölüm */
+  .english {
+    margin-top: 80px;
+    padding-top: 44px;
+    border-top: 3px solid var(--line);
+  }
+
+  .english h2 { border-top: none; padding-top: 0; margin-top: 40px; }
+
+  .lang-label {
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 8px;
+  }
+
+  .english h1 { font-size: clamp(28px, 6vw, 36px); }
+
+  footer {
+    margin-top: 72px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: 12px;
+    color: var(--ink-faint);
+    line-height: 1.8;
+  }
+
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { color: #FFE45C; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+  @media (max-width: 480px) {
+    body { font-size: 16px; }
+    .wrap { padding: 48px 20px 72px; }
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="brand">
+      <svg viewBox="0 0 760 760" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <line x1="212" y1="566" x2="548" y2="194" stroke="#FFD400" stroke-width="80" stroke-linecap="round"></line>
+        <circle cx="232" cy="228" r="122" fill="#FFD400"></circle>
+        <circle cx="528" cy="532" r="86" stroke="#FFD400" stroke-width="72" fill="none"></circle>
+      </svg>
+      <span class="brand-name">Ticari Hesap Makinesi</span>
+    </div>
+
+    <h1>Destek</h1>
+
+    <div class="dates">
+      <span>Sürüm 1.0</span>
+      <span>iPhone · iOS 17 ve üstü</span>
+    </div>
+  </header>
+
+  <div class="headline">
+    <p>Sorunu, önerisi ya da sorusu olan doğrudan yazsın — aynı gün okunur.</p>
+  </div>
+
+  <h2>İletişim</h2>
+  <p class="quiet">Tek adres. Hesap açman, form doldurman gerekmez.</p>
+  <div class="contact">
+    <a href="mailto:hesapmakinesiogz@gmail.com">hesapmakinesiogz@gmail.com</a>
+  </div>
+  <p class="quiet" style="margin-top:16px">Bir hata bildiriyorsan şunları yazarsan çok yardımcı olur: telefon modelin, iOS sürümün ve hatanın çıktığı adımlar.</p>
+
+  <h2>Uygulama ne yapıyor?</h2>
+  <p>Ticari Hesap Makinesi, tezgâhın başında lazım olan hesapları tek ekranda toplar: KDV ekleme ve ayırma, kâr marjı, iskonto, zam, etiket fiyatı, taksit, vade farkı, yüzde ve birim fiyat. Kalemleri sepete atıp fiş toplamı alabilir, fişi paylaşabilirsin. Yaptığın her işlem banda yazılır ve uygulamayı kapatsan da durur.</p>
+  <p>Reklam yok, üyelik yok, internet bağlantısı istemez.</p>
+
+  <h2>Sık sorulanlar</h2>
+
+  <p><strong>Bir tuşun ne yaptığını bilmiyorum.</strong> Tuşa basılı tut — ne işe yaradığı örnekle anlatılır. Bu, bütün hesap tuşları ve alttaki sekiz araç tuşu için geçerli.</p>
+
+  <p><strong>Kontrol Merkezi tuşunu nasıl eklerim?</strong> Sağ üst köşeden aşağı çek, sol üstteki <em>+</em> işaretine dokun, <em>Denetim Ekle</em> de ve <em>Sepet Toplamı</em>'nı seç. Tuş, sepetteki genel toplamı gösterir; dokununca uygulama açılır. Bu tuş iOS 18 ve üstünde çalışır.</p>
+
+  <p><strong>Widget'ı nasıl eklerim?</strong> Ana ekranda boş bir yere basılı tut, sol üstteki <em>+</em> işaretine dokun, listeden <em>Ticari Hesap Makinesi</em>'yi seç. Widget da sepetin genel toplamını gösterir.</p>
+
+  <p><strong>Uygulama bunları neden kendisi eklemiyor?</strong> iOS buna izin vermiyor. Hiçbir uygulama kendini ana ekran widget'ına ya da Kontrol Merkezine otomatik ekleyemez; kullanıcının elle eklemesi gerekir.</p>
+
+  <p><strong>KDV oranını nasıl değiştiririm?</strong> Sol üstteki <em>KDV %20</em> düğmesine dokun. Hazır oranlardan seçebilir ya da kendi oranını tuşlarla yazabilirsin.</p>
+
+  <p><strong>Bandı nasıl temizlerim?</strong> Üstteki saat ikonundan bant ekranını aç; oradan geçmişi silebilirsin. Bir satıra dokunursan o sonuç ekrana geri gelir.</p>
+
+  <p><strong>Verilerim nerede duruyor?</strong> Yalnızca kendi telefonunda. Uygulama internete hiç çıkmaz, hiçbir bilgin toplanmaz veya gönderilmez. Ayrıntı için <a href="gizlilik-politikasi.html">gizlilik politikası</a>.</p>
+
+  <p><strong>iPad'de çalışır mı?</strong> Uygulama iPhone için tasarlandı. iPad'e kurulabilir ama iPhone görünümünde açılır.</p>
+
+  <h2>Gizlilik</h2>
+  <p>Hiçbir kişisel veri toplanmaz, saklanmaz veya paylaşılmaz. Tam metin: <a href="gizlilik-politikasi.html">Gizlilik Politikası</a>.</p>
+
+  <section class="english">
+    <p class="lang-label">English</p>
+    <h1>Support</h1>
+    <p class="quiet">Version 1.0 · iPhone · iOS 17 and later</p>
+
+    <div class="headline">
+      <p>Questions, bug reports and suggestions all go to one address.</p>
+    </div>
+
+    <h2>Contact</h2>
+    <div class="contact">
+      <a href="mailto:hesapmakinesiogz@gmail.com">hesapmakinesiogz@gmail.com</a>
+    </div>
+    <p class="quiet" style="margin-top:16px">For bug reports, please include your iPhone model, iOS version and the steps that led to the problem.</p>
+
+    <h2>What the app does</h2>
+    <p>A calculator built for shopkeepers: VAT in and out, profit margin, discount, markup, retail price, instalments, late-payment interest, percentage and unit price — all on one screen. Items can be added to a basket and the receipt shared. Every calculation is written to a tape that survives closing the app.</p>
+    <p>No ads, no account, no internet connection required.</p>
+
+    <h2>Common questions</h2>
+    <p><strong>I don't know what a key does.</strong> Press and hold it — the app explains it with an example.</p>
+    <p><strong>How do I add the Control Center button?</strong> Swipe down from the top-right corner, tap <em>+</em> at the top left, choose <em>Add a Control</em> and pick <em>Sepet Toplamı</em> (Basket Total). Requires iOS 18 or later.</p>
+    <p><strong>How do I add the home screen widget?</strong> Touch and hold an empty area of the home screen, tap <em>+</em> at the top left and pick <em>Ticari Hesap Makinesi</em>.</p>
+    <p><strong>Why can't the app add these itself?</strong> iOS provides no way for an app to add its own widget or Control Center button. The user has to add it manually.</p>
+    <p><strong>Where is my data stored?</strong> Only on your own device. The app never connects to the internet. See the <a href="gizlilik-politikasi.html">Privacy Policy</a>.</p>
+  </section>
+
+  <footer>
+    Ticari Hesap Makinesi · © 2026 Kerem Altansoy<br>
+    Bu sayfa App Store'un zorunlu tuttuğu destek adresi (Support URL) içindir.
+  </footer>
+
+</div>

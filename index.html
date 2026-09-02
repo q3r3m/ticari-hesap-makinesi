@@ -1,0 +1,229 @@
+<title>Ticari Hesap Makinesi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500&family=DM+Mono:wght@500&display=swap">
+
+<style>
+  /* Uygulamanın kendi dünyası: gövde her zaman simsiyah, vurgu sarı.
+     Tek görünüm bilinçli seçildi — bu yüzden bütün renkler açıkça yazılı. */
+  :root {
+    --ground:  #0A0A0A;
+    --surface: #141414;
+    --raised:  #1B1B1B;
+    --ink:     #EFEFEF;
+    --ink-dim: #8E8E8E;
+    --ink-faint: #6A6A6A;
+    --accent:  #FFD400;
+    --line:    rgba(255, 255, 255, 0.09);
+    --measure: 62ch;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: var(--measure);
+    margin: 0 auto;
+    padding: 72px 24px 96px;
+  }
+
+  /* Başlık bloğu */
+  .masthead { display: flex; flex-direction: column; gap: 28px; }
+
+  .brand { display: flex; align-items: center; gap: 14px; }
+
+  .brand svg { width: 34px; height: 34px; flex-shrink: 0; }
+
+  .brand-name {
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+  }
+
+  h1 {
+    font-family: "Space Grotesk", "Helvetica Neue", sans-serif;
+    font-weight: 700;
+    font-size: clamp(34px, 7vw, 46px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+    margin: 0;
+    color: var(--ink);
+  }
+
+  .dates {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: 13px;
+    color: var(--ink-faint);
+  }
+
+  /* Asıl mesaj: tek cümle */
+  .headline {
+    margin: 44px 0 0;
+    padding: 26px 28px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    border-radius: 4px;
+  }
+
+  .headline p {
+    margin: 0;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.45;
+    color: var(--ink);
+  }
+
+  h2 {
+    font-family: "Space Grotesk", "Helvetica Neue", sans-serif;
+    font-weight: 700;
+    font-size: 21px;
+    letter-spacing: -0.01em;
+    margin: 52px 0 14px;
+    padding-top: 26px;
+    border-top: 1px solid var(--line);
+    color: var(--ink);
+  }
+
+  p { margin: 0 0 16px; color: var(--ink); }
+
+  p.quiet { color: var(--ink-dim); }
+
+  strong { font-weight: 500; color: var(--accent); }
+
+  ul { margin: 0 0 16px; padding-left: 22px; }
+  li { margin-bottom: 8px; }
+  li::marker { color: var(--ink-faint); }
+
+  /* İletişim kutusu */
+  .contact {
+    margin-top: 20px;
+    padding: 20px 24px;
+    background: var(--raised);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    border-radius: 4px;
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: 15px;
+    color: var(--ink);
+  }
+
+  /* İngilizce bölüm */
+  .english {
+    margin-top: 80px;
+    padding-top: 44px;
+    border-top: 3px solid var(--line);
+  }
+
+  .english h2 { border-top: none; padding-top: 0; margin-top: 40px; }
+
+  .lang-label {
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 8px;
+  }
+
+  .english h1 { font-size: clamp(28px, 6vw, 36px); }
+
+  footer {
+    margin-top: 72px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: 12px;
+    color: var(--ink-faint);
+    line-height: 1.8;
+  }
+
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { color: #FFE45C; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+  @media (max-width: 480px) {
+    body { font-size: 16px; }
+    .wrap { padding: 48px 20px 72px; }
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="brand">
+      <svg viewBox="0 0 760 760" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <line x1="212" y1="566" x2="548" y2="194" stroke="#FFD400" stroke-width="80" stroke-linecap="round"></line>
+        <circle cx="232" cy="228" r="122" fill="#FFD400"></circle>
+        <circle cx="528" cy="532" r="86" stroke="#FFD400" stroke-width="72" fill="none"></circle>
+      </svg>
+      <span class="brand-name">Ticari Hesap Makinesi</span>
+    </div>
+
+    <h1>Esnafın ve plasiyerin hesap makinesi</h1>
+
+    <div class="dates">
+      <span>iPhone · iOS 17 ve üstü</span>
+      <span>Sürüm 1.0</span>
+    </div>
+  </header>
+
+  <div class="headline">
+    <p>Tezgâhın başında lazım olan her hesap tek ekranda: KDV, kâr marjı, iskonto, taksit ve fiş toplama.</p>
+  </div>
+
+  <h2>Ne yapıyor?</h2>
+  <p>Normal bir hesap makinesi gibi açılır — ama esnafın gün içinde ihtiyaç duyduğu her şey tuşların üstünde durur. Menüde arama yok, kaydırma yok.</p>
+  <ul>
+    <li><strong>KDV bir tuş.</strong> Ekler ya da dahil tutardan ayırır. Oranı üstten seçersin.</li>
+    <li><strong>Soru soran araçlar.</strong> Formül ezberlemeye gerek yok: marj, iskonto, zam, etiket fiyatı, taksit, vade farkı, yüzde ve birim fiyat.</li>
+    <li><strong>Sepet ve fiş.</strong> Kalemler alt alta birikir; ara toplam, KDV ve genel toplam altta canlı durur. Fiş tek tuşla paylaşılır.</li>
+    <li><strong>Silinmeyen bant.</strong> Yaptığın her işlem yazılır, uygulamayı kapatsan da durur.</li>
+    <li><strong>Widget ve Kontrol Merkezi.</strong> Sepetin genel toplamı telefonu açmadan görünür.</li>
+  </ul>
+  <p>Reklam yok. Üyelik yok. İnternet bağlantısı istemez. Hiçbir bilgin toplanmaz.</p>
+
+  <h2>Yardım ve iletişim</h2>
+  <p>Sorun, öneri ya da hata bildirimi için <a href="destek.html">destek sayfası</a>. Verilerin hakkında bilgi için <a href="gizlilik-politikasi.html">gizlilik politikası</a>.</p>
+  <div class="contact">
+    <a href="mailto:hesapmakinesiogz@gmail.com">hesapmakinesiogz@gmail.com</a>
+  </div>
+
+  <section class="english">
+    <p class="lang-label">English</p>
+    <h1>A calculator for shopkeepers</h1>
+    <p class="quiet">iPhone · iOS 17 and later · Version 1.0</p>
+
+    <div class="headline">
+      <p>Every calculation you need behind the counter, on one screen: VAT, profit margin, discount, instalments and a running receipt.</p>
+    </div>
+
+    <p>It opens like an ordinary calculator, but everything a shopkeeper needs during the day sits right on the keys — no menus, no scrolling. VAT in and out with one key, guided tools for margin, discount, markup, retail price, instalments, late-payment interest, percentage and unit price, a basket that totals a receipt, and a tape that survives closing the app.</p>
+    <p>No ads. No account. No internet connection. No data collected.</p>
+
+    <p><a href="destek.html">Support</a> · <a href="gizlilik-politikasi.html">Privacy Policy</a></p>
+  </section>
+
+  <footer>
+    Ticari Hesap Makinesi · © 2026 Kerem Altansoy<br>
+    hesapmakinesiogz@gmail.com
+  </footer>
+
+</div>
