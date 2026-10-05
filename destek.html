@@ -1,11 +1,15 @@
+<!doctype html>
+<html lang="tr">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ticari Hesap Makinesi Destek</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500&family=DM+Mono:wght@500&display=swap">
 
 <style>
-  /* Uygulamanın kendi dünyası: gövde her zaman simsiyah, vurgu sarı.
-     Tek görünüm bilinçli seçildi — bu yüzden bütün renkler açıkça yazılı. */
+  /* Uygulamanın marka görünümü: koyu zemin, sarı vurgu. Sayfalar tek
+     görünümle yayınlanıyor; bu yüzden bütün renkler açıkça yazılı. */
   :root {
     --ground:  #0A0A0A;
     --surface: #141414;
@@ -108,6 +112,10 @@
 
   strong { font-weight: 500; color: var(--accent); }
 
+  /* SSS: soru kendi satırında, cevap altında */
+  .faq p { margin-bottom: 22px; }
+  .faq strong { display: block; margin-bottom: 2px; }
+
   ul { margin: 0 0 16px; padding-left: 22px; }
   li { margin-bottom: 8px; }
   li::marker { color: var(--ink-faint); }
@@ -181,79 +189,77 @@
 
     <div class="dates">
       <span>Sürüm 1.0</span>
-      <span>iPhone · iOS 17 ve üstü</span>
+      <span>iPhone · iOS 16.4 ve sonrası</span>
     </div>
   </header>
 
   <div class="headline">
-    <p>Sorunu, önerisi ya da sorusu olan doğrudan yazsın — aynı gün okunur.</p>
+    <p>Sorularınızı, önerilerinizi ve hata bildirimlerinizi e-posta ile iletebilirsiniz.</p>
   </div>
 
   <h2>İletişim</h2>
-  <p class="quiet">Tek adres. Hesap açman, form doldurman gerekmez.</p>
+  <p class="quiet">Hesap oluşturmanız veya form doldurmanız gerekmez.</p>
   <div class="contact">
     <a href="mailto:hesapmakinesiogz@gmail.com">hesapmakinesiogz@gmail.com</a>
   </div>
-  <p class="quiet" style="margin-top:16px">Bir hata bildiriyorsan şunları yazarsan çok yardımcı olur: telefon modelin, iOS sürümün ve hatanın çıktığı adımlar.</p>
+  <p class="quiet" style="margin-top:16px">Hata bildirirken iPhone modelinizi, iOS sürümünüzü ve hatanın oluştuğu adımları belirtmeniz, sorunun daha hızlı çözülmesini sağlar.</p>
 
-  <h2>Uygulama ne yapıyor?</h2>
-  <p>Ticari Hesap Makinesi, tezgâhın başında lazım olan hesapları tek ekranda toplar: KDV ekleme ve ayırma, kâr marjı, iskonto, zam, etiket fiyatı, taksit, vade farkı, yüzde ve birim fiyat. Kalemleri sepete atıp fiş toplamı alabilir, fişi paylaşabilirsin. Yaptığın her işlem banda yazılır ve uygulamayı kapatsan da durur.</p>
-  <p>Reklam yok, üyelik yok, internet bağlantısı istemez.</p>
+  <h2>Uygulama hakkında</h2>
+  <p>Ticari Hesap Makinesi; KDV ekleme ve ayırma, kâr marjı, iskonto, zam, etiket fiyatı, vade farkı ve taksit, yüzde ve birim fiyat hesaplarını tek bir uygulamada sunar. Kalemleri sepete ekleyerek fiş toplamı alabilir ve fişi paylaşabilirsiniz. Her işlem kaydedilir ve uygulama kapatıldığında da korunur.</p>
+  <p>Uygulama reklam içermez, üyelik gerektirmez ve internet bağlantısı kullanmaz.</p>
 
-  <h2>Sık sorulanlar</h2>
+  <h2>Sık sorulan sorular</h2>
+  <div class="faq">
 
-  <p><strong>Bir tuşun ne yaptığını bilmiyorum.</strong> Tuşa basılı tut — ne işe yaradığı örnekle anlatılır. Bu, bütün hesap tuşları ve alttaki sekiz araç tuşu için geçerli.</p>
+  <p><strong>Bir tuşun işlevini nasıl öğrenebilirim?</strong> Tuşa basılı tutun; işlevi bir örnekle açıklanır. Bu özellik tüm işlem tuşları ve hesap araçları için geçerlidir.</p>
 
-  <p><strong>Kontrol Merkezi tuşunu nasıl eklerim?</strong> Sağ üst köşeden aşağı çek, sol üstteki <em>+</em> işaretine dokun, <em>Denetim Ekle</em> de ve <em>Sepet Toplamı</em>'nı seç. Tuş, sepetteki genel toplamı gösterir; dokununca uygulama açılır. Bu tuş iOS 18 ve üstünde çalışır.</p>
+  <p><strong>Widget nasıl eklenir?</strong> Ana ekranda boş bir alana basılı tutun, sol üstteki <em>+</em> simgesine dokunun ve listeden <em>Ticari Hesap Makinesi</em>'ni seçin. Widget, sepetin genel toplamını gösterir. iOS 17 ve sonraki sürümlerde kullanılabilir.</p>
 
-  <p><strong>Kontrol Merkezi tuşunda toplam yerine yalnızca % işareti görünüyor.</strong> Tuş en küçük boyutta eklenmiş. Kontrol Merkezi'ni açıp sol üstteki <em>+</em> işaretine dokun, tuşun sağ alt köşesindeki tutamaçtan sağa doğru çekip genişlet. Geniş hâlinde sepetteki genel toplam (örneğin <em>122,40 ₺</em>) yazar; sepet boşken <em>Hesap Makinesi</em> yazar.</p>
+  <p><strong>Kontrol Merkezi tuşu nasıl eklenir?</strong> Sağ üst köşeden aşağı kaydırın, sol üstteki <em>+</em> simgesine dokunun, <em>Denetim Ekle</em>'yi seçin ve <em>Sepet Toplamı</em>'nı ekleyin. Tuş, sepetin genel toplamını gösterir; dokunduğunuzda uygulama açılır. iOS 18 ve sonraki sürümlerde kullanılabilir.</p>
 
-  <p><strong>Widget'ı nasıl eklerim?</strong> Ana ekranda boş bir yere basılı tut, sol üstteki <em>+</em> işaretine dokun, listeden <em>Ticari Hesap Makinesi</em>'yi seç. Widget da sepetin genel toplamını gösterir.</p>
+  <p><strong>Kontrol Merkezi tuşunda toplam yerine yalnızca % simgesi görünüyor.</strong> Tuş en küçük boyutta eklenmiştir. Kontrol Merkezi'ni açın, sol üstteki <em>+</em> simgesine dokunun ve tuşun sağ alt köşesindeki tutamacı sağa doğru sürükleyerek tuşu genişletin. Genişletilen tuşta sepetin genel toplamı (örneğin <em>122,40 ₺</em>), sepet boşken ise <em>Hesap Makinesi</em> yazar.</p>
 
-  <p><strong>Uygulama bunları neden kendisi eklemiyor?</strong> iOS buna izin vermiyor. Hiçbir uygulama kendini ana ekran widget'ına ya da Kontrol Merkezine otomatik ekleyemez; kullanıcının elle eklemesi gerekir.</p>
+  <p><strong>Widget ve Kontrol Merkezi tuşu neden otomatik eklenmiyor?</strong> iOS, uygulamaların bunları kendiliğinden eklemesine izin vermez; eklemenin kullanıcı tarafından yapılması gerekir.</p>
 
-  <p><strong>KDV oranını nasıl değiştiririm?</strong> Sol üstteki <em>KDV %20</em> düğmesine dokun. Hazır oranlardan seçebilir ya da kendi oranını tuşlarla yazabilirsin.</p>
+  <p><strong>KDV oranı nasıl değiştirilir?</strong> Sol üstteki <em>KDV</em> düğmesine dokunun. Güncel veya önceki oranlardan birini seçebilir ya da <em>Kendin gir</em> ile özel bir oran tanımlayabilirsiniz. Seçilen oran, KDV tuşlarında, sepette ve hesap araçlarında kullanılır.</p>
 
-  <p><strong>Bandı nasıl temizlerim?</strong> Üstteki saat ikonundan bant ekranını aç; oradan geçmişi silebilirsin. Bir satıra dokunursan o sonuç ekrana geri gelir.</p>
+  <p><strong>İşlem kaydı nasıl temizlenir?</strong> Üst çubuktaki <em>Bant</em> düğmesiyle kayıt ekranını açın ve silme simgesine dokunun. Bir kayda dokunduğunuzda o sonuç hesap makinesine geri getirilir.</p>
 
-  <p><strong>Verilerim nerede duruyor?</strong> Yalnızca kendi telefonunda. Uygulama internete hiç çıkmaz, hiçbir bilgin toplanmaz veya gönderilmez. Ayrıntı için <a href="gizlilik-politikasi.html">gizlilik politikası</a>.</p>
+  <p><strong>Verilerim nerede saklanıyor?</strong> Yalnızca cihazınızda. Uygulama internete bağlanmaz; hiçbir veri toplanmaz veya aktarılmaz. Ayrıntılar için <a href="gizlilik-politikasi.html">gizlilik politikasını</a> inceleyebilirsiniz.</p>
 
-  <p><strong>iPad'de çalışır mı?</strong> Uygulama iPhone için tasarlandı. iPad'e kurulabilir ama iPhone görünümünde açılır.</p>
+  <p><strong>Uygulama iPad'de kullanılabilir mi?</strong> Uygulama iPhone için tasarlanmıştır. iPad'e yüklenebilir; bu durumda iPhone görünümünde çalışır.</p>
+  </div>
 
-  <h2>Gizlilik</h2>
-  <p>Hiçbir kişisel veri toplanmaz, saklanmaz veya paylaşılmaz. Tam metin: <a href="gizlilik-politikasi.html">Gizlilik Politikası</a>.</p>
-
-  <section class="english">
+  <section class="english" lang="en">
     <p class="lang-label">English</p>
     <h1>Support</h1>
-    <p class="quiet">Version 1.0 · iPhone · iOS 17 and later</p>
+    <p class="quiet">Version 1.0 · iPhone · iOS 16.4 and later</p>
 
     <div class="headline">
-      <p>Questions, bug reports and suggestions all go to one address.</p>
+      <p>Questions, suggestions and bug reports can be sent by email.</p>
     </div>
 
     <h2>Contact</h2>
     <div class="contact">
       <a href="mailto:hesapmakinesiogz@gmail.com">hesapmakinesiogz@gmail.com</a>
     </div>
-    <p class="quiet" style="margin-top:16px">For bug reports, please include your iPhone model, iOS version and the steps that led to the problem.</p>
+    <p class="quiet" style="margin-top:16px">When reporting a bug, please include your iPhone model, iOS version and the steps that led to the problem.</p>
 
-    <h2>What the app does</h2>
-    <p>A calculator built for shopkeepers: VAT in and out, profit margin, discount, markup, retail price, instalments, late-payment interest, percentage and unit price — all on one screen. Items can be added to a basket and the receipt shared. Every calculation is written to a tape that survives closing the app.</p>
-    <p>No ads, no account, no internet connection required.</p>
-
-    <h2>Common questions</h2>
-    <p><strong>I don't know what a key does.</strong> Press and hold it — the app explains it with an example.</p>
-    <p><strong>How do I add the Control Center button?</strong> Swipe down from the top-right corner, tap <em>+</em> at the top left, choose <em>Add a Control</em> and pick <em>Sepet Toplamı</em> (Basket Total). Requires iOS 18 or later.</p>
-    <p><strong>The Control Center button only shows a % sign, not the total.</strong> It was added at the smallest size. Open Control Center, tap <em>+</em> at the top left, then drag the handle at the button's bottom-right corner to the right to widen it. The wider button shows the basket total (e.g. <em>122,40 ₺</em>), or <em>Hesap Makinesi</em> when the basket is empty.</p>
-    <p><strong>How do I add the home screen widget?</strong> Touch and hold an empty area of the home screen, tap <em>+</em> at the top left and pick <em>Ticari Hesap Makinesi</em>.</p>
-    <p><strong>Why can't the app add these itself?</strong> iOS provides no way for an app to add its own widget or Control Center button. The user has to add it manually.</p>
-    <p><strong>Where is my data stored?</strong> Only on your own device. The app never connects to the internet. See the <a href="gizlilik-politikasi.html">Privacy Policy</a>.</p>
+    <h2>Frequently asked questions</h2>
+    <div class="faq">
+    <p><strong>How can I find out what a key does?</strong> Press and hold the key; its function is explained with an example.</p>
+    <p><strong>How do I add the widget?</strong> Touch and hold an empty area of the Home Screen, tap <em>+</em> at the top left and select <em>Ticari Hesap Makinesi</em>. Requires iOS 17 or later.</p>
+    <p><strong>How do I add the Control Center control?</strong> Swipe down from the top-right corner, tap <em>+</em> at the top left, choose <em>Add a Control</em> and select <em>Sepet Toplamı</em> (Basket Total). Requires iOS 18 or later.</p>
+    <p><strong>The Control Center control shows only a % symbol.</strong> The control was added at the smallest size. Open Control Center, tap <em>+</em> at the top left and drag the handle at the control's bottom-right corner to widen it. The wider control shows the basket total, or <em>Hesap Makinesi</em> when the basket is empty.</p>
+    <p><strong>Why are these not added automatically?</strong> iOS does not allow apps to add widgets or Control Center controls by themselves; they must be added by the user.</p>
+    <p><strong>Where is my data stored?</strong> Only on your device. The app does not connect to the internet. See the <a href="gizlilik-politikasi.html">Privacy Policy</a>.</p>
+    </div>
   </section>
 
   <footer>
     Ticari Hesap Makinesi · © 2026 Kerem Altansoy<br>
-    Bu sayfa App Store'un zorunlu tuttuğu destek adresi (Support URL) içindir.
+    hesapmakinesiogz@gmail.com
   </footer>
 
 </div>
+</html>
